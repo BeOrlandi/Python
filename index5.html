@@ -1,0 +1,23 @@
+<h1>Olá, {{ nome }}!</h1>
+
+<p>Nome: {{ nome }}</p>
+<p>Idade: {{ idade }}</p>
+
+<h2>Usuário</h2>
+<p>Nome: {{ usuario.nome }}</p>
+<p>Email: {{ usuario.email }}</p>
+
+<h2>Lista de alunos</h2>
+<ul>
+    {% for aluno in alunos %}
+        <li>{{ aluno }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Resultado</h2>
+
+{% if nota >= 7 %}
+    <p>Aprovado</p>
+{% else %}
+    <p>Reprovado</p>
+{% endif %}
