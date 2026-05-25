@@ -1,0 +1,210 @@
+<!-- A linha abaixo é a declaração do DOCTYPE. Ela informa ao navegador que esta é uma página HTML5.
+     Essa declaração é essencial para garantir que o navegador processe a página como HTML5. -->
+<!DOCTYPE html>
+
+<!-- A tag <html> indica o início do documento HTML.
+     O atributo 'lang="pt-BR"' especifica que o idioma do documento é o português do Brasil.
+     Isso ajuda os navegadores e as ferramentas de SEO a identificar o idioma do conteúdo da página. -->
+<html lang="pt-BR">
+
+<!-- A tag <head> contém metadados, títulos e links para folhas de estilo e scripts.
+         Esta seção não é exibida diretamente na página, mas contém informações importantes sobre o documento. -->
+<head>
+
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a codificação de caracteres para UTF-8.
+         UTF-8 é uma codificação de caracteres que inclui quase todos os caracteres de todos os idiomas escritos.
+         Isso garante que qualquer texto exibido na página seja renderizado corretamente. -->
+    <meta charset="UTF-8">
+
+    <!-- A tag <title> define o título da página, que é exibido na aba do navegador.
+         Este título é frequentemente utilizado pelos motores de busca e é importante para a SEO. -->
+    <title>Calculadora</title>
+
+
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=r-xrqXX2Yjq_iCr4jQsQFbP-hwKVzOzU0MMBxV3KVvPSSSW7kGNQARUloRC64kgrLHkXacEdv4udHOgXK--lYQjaZ6hBd0zdr8fCzF8qbrYUwtt6bDbIWL9krupiSN_tXt9P6dP3dLDuktDrn6_-amPnDDVeegHn3d16hfBI_7yr_92L11enf3oWalZdckN00IJ1Cpmt6VQwj_lRzmDATUE9PS2DtgTqlanH-BckR3oXAROG7sBPsac_yMSO0aC5LoAJNk5C5gImR2cevQk5WrAScMkPkOdvE6_ulipSyldDB0tDPAcN0jCI469Oc-cGs8F5dzBquzTd6ufhQALiMql0GNqSWfn4j6K-12UNP_8zDCbfkdT_MHRx7ujwf1-7yLssiqowlzZk21TRcizjEQWIjrh92tyLIEyZ_tjfA5m-GS1vg4R-Kagsuo_RuRkLQX4tvxm4Z0nqkzoBfMxLHpoBNQFkCHZzvaHy8fJV6GCzxw3G6-_PB2gO_ZfLIb0BRefvw4i43s4Q0AHDNurUCEgKWw7ceq_CHj4Fak39I2OzCat7t8fibED37CCKAKvQVGoN63ISAhPnRoBm7SitOihfKmLLvOXrZaWxEF55V3D87r4UYvzpxLJo7Fv4nTtMqw_cy2abCO88N3ULgjD9Qxb7pNzC17J5ifBcTgn4CoBc0_hLMjECHrQMN9Y0-34sZswQ9yEiR306IuHvk5vv0hV31qXs_Iv90sbW86JFfuzzAjFrtVDLU9Sg4LwtaFmTp4Erjs_4yZ2F45fBeCJW7g" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9hdHQtYy51ZGVteWNkbi5jb20vMjAyMy0xMi0wMV8xNy0zMi0wNS1hZGFiZmYwOGM5NjYzYjRmYjJjY2FjNDI1YWYyYmVlZS9vcmlnaW5hbC5odG1sP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249YXR0YWNobWVudCUzYiUyMGZpbGVuYW1lJTNkY2FsY3VsYWRvcmEuaHRtbCZFeHBpcmVzPTE3Nzg4MDYwNTQmU2lnbmF0dXJlPVhvaGlQZURMdEw0RndBYnA1a0tpUWNldE9mSXd5SGV5LXlaUk9jeFhmc1VWVEpwcUxzNjQ0VVUxQ041OFRvdlVkSWJBcEtJN2dCUnNhNnB3ODlubDVVbjdiRzdocGxJflpjMnFBd1hUbVA0VU4tbjB1c0N6QjBzT0otUH4wSEVxR1lTbmJ4R3NqTlBkWDU2SnFlcVZNeWxlaHJhVXZES3BhSzRHVU5Gd1BHSllqWWhVVXN4MXBKWXdUUjRweHh1TXo4VnIwdnByZkExenlPTW9xVUpqcG16eGlyMkc2cjNjTlVsMFFMaElWdzVnS0lHMFRqTFd5ZXduSEV3TlBwTmo2SzZWR1o0NGdXTklmTHNUOFdlUXlNcjMzN3M4SkVYLUxzLVhHYUZVM0FGWlN3V3B4M0dVZFhJb2gtYVRXM0J6RUw2Qy1nYWxIM0dEWHNhODVHU0ZvUV9fJktleS1QYWlyLUlkPUszTUcxNDhLOVJJUkY0"/><style> /* Estilos CSS para a tag <body>. */
+
+        body {
+            text-align: center; /* Alinha o texto ao centro. Isso afeta todo o texto no corpo da página. */
+            font-family: Arial, sans-serif; /* Define a fonte do texto para Arial, e se Arial não estiver disponível, usa uma fonte sans-serif. */
+        }
+
+        /* Estilos para o elemento <h1>. */
+        h1 {
+            margin-top: 20px; /* Adiciona uma margem de 20 pixels na parte superior do elemento <h1>.
+                                 Isso cria um espaço entre o topo da página e o título. */
+        }
+
+        /* Estilos para o elemento com o ID 'calculator'. */
+        #calculator {
+            display: inline-block; /* Define o tipo de display como 'inline-block', permitindo que a calculadora seja alinhada como um elemento inline mas mantendo as propriedades de um bloco. */
+            text-align: left; /* Alinha o texto dentro da calculadora à esquerda. */
+            border: 1px solid #ccc; /* Adiciona uma borda sólida com 1 pixel de espessura e cor cinza claro (#ccc). */
+            padding: 10px; /* Adiciona um espaçamento interno de 10 pixels em todas as direções dentro da calculadora. */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Aplica uma sombra ao redor da calculadora para dar um efeito 3D sutil.
+                                                             A sombra é preta com 20% de opacidade. */
+            width: 300px; /* Define a largura da calculadora para 300 pixels. */
+            margin: 0 auto; /* Centraliza a calculadora horizontalmente na página. '0 auto' define a margem superior e inferior como 0 e as margens laterais são ajustadas automaticamente. */
+        }
+
+
+        /* Estilos para os campos de entrada de texto (input) do tipo "text". */
+        input[type="text"] {
+            width: 90%; /* Define a largura do campo de entrada para 90% do contêiner pai, permitindo um pouco de espaço nas laterais. */
+            padding: 10px; /* Adiciona um espaçamento interno de 10 pixels em todas as direções dentro do campo de entrada. */
+            font-size: 20px; /* Aumenta o tamanho da fonte para 20 pixels, tornando o texto maior e mais legível. */
+            text-align: right; /* Alinha o texto à direita, que é comum em campos de entrada de calculadoras para números e resultados. */
+        }
+
+        /* Estilos para os elementos input do tipo "button". */
+        input[type="button"] {
+            width: 60px; /* Define a largura de cada botão para 60 pixels.
+                            Isso ajuda a garantir que todos os botões tenham um tamanho uniforme. */
+            height: 50px; /* Define a altura de cada botão para 50 pixels.
+                             Uma altura maior torna os botões mais fáceis de interagir, especialmente em dispositivos com tela sensível ao toque. */
+            font-size: 20px; /* Aumenta o tamanho da fonte para 20 pixels.
+                                Isso torna os números e símbolos nos botões mais legíveis. */
+            margin: 5px; /* Adiciona uma margem de 5 pixels em torno de cada botão.
+                            Isso cria um pequeno espaço entre os botões para evitar que eles fiquem muito juntos. */
+        }
+
+        /* Estilos para o elemento com o ID 'etapas'.
+           Este elemento é usado para exibir as etapas da operação na calculadora. */
+        #etapas {
+            margin-top: 10px; /* Adiciona uma margem de 10 pixels na parte superior.
+                                 Isso separa visualmente o display de etapas dos botões da calculadora. */
+            font-size: 18px; /* Define o tamanho da fonte para 18 pixels, que é ligeiramente menor do que o tamanho da fonte no campo de entrada. */
+            text-align: right; /* Alinha o texto à direita.
+                                  Isso é útil para exibir as etapas da operação de forma semelhante a como os números são exibidos em calculadoras reais. */
+            white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas.
+                                    Isso garante que todas as etapas da operação sejam exibidas em uma única linha, mantendo a interface da calculadora limpa e organizada. */
+        }
+    </style>
+</head>
+
+
+
+<!-- A tag <body> contém todo o conteúdo visível da página web. -->
+<body>
+
+    <!-- A tag <h1> cria um cabeçalho de nível um na página.
+         Neste caso, é o título principal 'Calculadora'. -->
+    <h1>Calculadora</h1>
+
+    <!-- A tag <div> cria uma divisão ou seção na página.
+             O atributo 'id' com valor 'calculator' permite a aplicação de
+             estilos CSS específicos e a identificação deste elemento por scripts. -->
+    <div id="calculator">
+
+        <!-- A tag <form> é usada para agrupar elementos de formulário.
+                 Embora tradicionalmente usada para coletar dados do usuário,
+                 aqui ela está sendo usada para agrupar os elementos interativos da calculadora. -->
+        <form>
+
+            <!-- Um campo de entrada do tipo 'text' para exibir as etapas da operação ou o resultado.
+                 'id="etapas"' permite a identificação deste campo para uso em scripts.
+                 'placeholder="0"' mostra um '0' quando o campo está vazio.
+                 'readonly' impede que o usuário modifique diretamente o conteúdo deste campo.
+                 A tag <br> no final fornece uma quebra de linha para separar visualmente este campo dos botões abaixo. -->
+            <input type="text" id="etapas" placeholder="0" readonly><br>
+
+            <!-- Um botão que exibe o número '1'.
+                 'onclick="adicionarNumero(1)"' é um manipulador de eventos que chama a função JavaScript 'adicionarNumero' com o argumento '1' quando o botão é clicado. -->
+            <input type="button" value="1" onclick="adicionarNumero(1)">
+
+            <!-- Similar ao botão anterior, mas para o número '2'. -->
+            <input type="button" value="2" onclick="adicionarNumero(2)">
+
+            <!-- Similar ao botão anterior, mas para o número '3'. -->
+            <input type="button" value="3" onclick="adicionarNumero(3)">
+
+            <!-- Um botão para a operação de adição.
+                 Ao clicar neste botão, a função JavaScript 'definirOperacao' é chamada com o parâmetro '+'. -->
+            <input type="button" value="+" onclick="definirOperacao('+')">
+
+            <!-- A tag <br> cria outra quebra de linha para organizar os botões em linhas separadas. -->
+            <br>
+
+            <!-- Botão número '4': ao clicar, o número '4' é adicionado à operação. -->
+            <input type="button" value="4" onclick="adicionarNumero(4)">
+
+            <!-- Botão número '5': ao clicar, o número '5' é adicionado à operação. -->
+            <input type="button" value="5" onclick="adicionarNumero(5)">
+
+            <!-- Botão número '6': ao clicar, o número '6' é adicionado à operação. -->
+            <input type="button" value="6" onclick="adicionarNumero(6)">
+
+            <!-- Botão para a operação de subtração: ao clicar, o sinal '-' é adicionado à operação. -->
+            <input type="button" value="-" onclick="definirOperacao('-')">
+
+            <!-- Quebra de linha para organizar os botões em linhas separadas. -->
+            <br>
+
+            <!-- Botão número '7': ao clicar, o número '7' é adicionado à operação. -->
+            <input type="button" value="7" onclick="adicionarNumero(7)">
+
+            <!-- Botão número '8': ao clicar, o número '8' é adicionado à operação. -->
+            <input type="button" value="8" onclick="adicionarNumero(8)">
+
+            <!-- Botão número '9': ao clicar, o número '9' é adicionado à operação. -->
+            <input type="button" value="9" onclick="adicionarNumero(9)">
+
+            <!-- Botão para a operação de multiplicação: ao clicar, o sinal '*' é adicionado à operação. -->
+            <input type="button" value="*" onclick="definirOperacao('*')">
+
+            <!-- Quebra de linha para organizar os botões em linhas separadas. -->
+            <br>
+
+            <!-- Botão número '0': ao clicar, o número '0' é adicionado à operação. -->
+            <input type="button" value="0" onclick="adicionarNumero(0)">
+
+            <!-- Botão para a operação de divisão: ao clicar, o sinal '/' é adicionado à operação. -->
+            <input type="button" value="/" onclick="definirOperacao('/')">
+
+            <!-- Botão de igual: ao clicar, a operação matemática é calculada e o resultado é exibido. -->
+            <input type="button" value="=" id="resultadoBtn" onclick="calcular()">
+
+            <!-- Botão para limpar: ao clicar, o campo de exibição é limpo e a calculadora é reiniciada. -->
+            <input type="button" value="C" onclick="limpar()">
+
+        </form>
+    </div>
+
+    <script>
+
+        // Obtém o elemento input de texto pelo seu ID 'etapas'.
+        var etapasInput = document.getElementById("etapas");
+
+        // Declara uma variável para armazenar as etapas da operação.
+        var etapas = "";
+
+        // Função para adicionar um número à operação.
+        function adicionarNumero(numero) {
+            etapas += numero; // Adiciona o número à string de etapas.
+            etapasInput.value = etapas; // Atualiza o campo de texto com as etapas atuais.
+        }
+
+        // Função para definir a operação (por exemplo, '+', '-', '*', '/').
+        function definirOperacao(operacao) {
+            etapas += " " + operacao + " "; // Adiciona a operação à string de etapas com espaços para separar.
+            etapasInput.value = etapas; // Atualiza o campo de texto com as etapas atuais.
+        }
+
+        // Função para calcular o resultado da operação.
+        function calcular() {
+            try {
+                etapas = eval(etapas).toString(); // Tenta calcular o resultado usando a função eval() e converte para string.
+                etapasInput.value = etapas; // Atualiza o campo de texto com o resultado.
+            } catch (error) {
+                etapasInput.value = 'Erro'; // Em caso de erro na operação, exibe 'Erro'.
+            }
+        }
+
+        // Função para limpar as etapas da operação e o campo de texto.
+        function limpar() {
+            etapas = ""; // Limpa a string de etapas.
+            etapasInput.value = ""; // Limpa o campo de texto.
+        }
+    </script>
+
+</body>
+</html>
