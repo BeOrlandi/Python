@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+
+    <h1>{{ titulo }}</h1>
+
+    <!-- TODO ALUNO: action deve apontar para cadastrar OU editar -->
+    <form method="POST" action="">
+        <p>
+            <label>Nome</label><br>
+            <input type="text" name="nome" required value="{{ nome or '' }}">
+        </p>
+        <p>
+            <label>E-mail</label><br>
+            <input type="email" name="email" required value="{{ email or '' }}">
+        </p>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <p><a href="{{ url_for('index') }}">Voltar</a></p>
+
+</body>
+</html>

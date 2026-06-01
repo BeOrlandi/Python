@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alunos</title>
+</head>
+<body>
+
+    <h1>Alunos</h1>
+    <p><a href="{{ url_for('cadastrar') }}">+ Novo aluno</a></p>
+
+    {% if alunos %}
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ aluno.id }}</td>
+            <td>{{ aluno.nome }}</td>
+            <!-- TODO ALUNO: exiba o e-mail do aluno -->
+            <td>___________</td>
+            <td>
+                <a href="{{ url_for('editar', aluno_id=aluno.id) }}">Editar</a>
+                <form method="POST" action="{{ url_for('excluir', aluno_id=aluno.id) }}" style="display:inline">
+                    <button type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>Nenhum aluno cadastrado.</p>
+    {% endif %}
+
+</body>
+</html>
