@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja Tech — Produtos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Loja Tech</h1>
+    <p class="subtitulo">Produtos tecnológicos — Atividade SQLAlchemy 2.0</p>
+
+    <!-- TODO ALUNO: link para rota cadastrar -->
+    <p>
+        <a class="btn" href="___________">+ Novo produto</a>
+    </p>
+
+    {# TODO ALUNO: condicional se existir produtos #}
+    {% if _________ %}
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço (R$)</th>
+                <th>Estoque</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {# TODO ALUNO: loop na lista de produtos #}
+            {% for produto in _________ %}
+            <tr>
+                <td>{{ produto.id }}</td>
+                <td>{{ produto.nome }}</td>
+                <!-- TODO ALUNO: exibir categoria, preco e estoque -->
+                <td>___________</td>
+                <td>___________</td>
+                <td>___________</td>
+                <td class="acoes">
+                    <!-- TODO ALUNO: url_for editar com produto_id=produto.id -->
+                    <a href="___________">Editar</a>
+                    <form method="POST" action="{{ url_for('excluir', produto_id=produto.id) }}"
+                          onsubmit="return confirm('Excluir {{ produto.nome }}?');">
+                        <button type="submit" class="btn-danger">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="vazio">Nenhum produto cadastrado.</p>
+    {% endif %}
+
+</body>
+</html>
