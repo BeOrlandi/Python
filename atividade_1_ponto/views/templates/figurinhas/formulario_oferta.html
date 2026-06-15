@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block title %}Nova oferta{% endblock %}
+
+{% block content %}
+<h1>Nova oferta de troca</h1>
+
+<form method="POST" action="{{ url_for('figurinhas.cadastrar_oferta') }}">
+
+    <div class="form-grupo">
+        <label>Colecionador</label>
+
+        <select name="colecionador_id" required>
+            <option value="">Quem está oferecendo?</option>
+
+            {% for colecionador in colecionadores %}
+            <option value="{{ colecionador.id }}">
+                {{ colecionador.apelido }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-grupo">
+        <label>Figurinha que OFERECE</label>
+
+        <select name="figurinha_oferece_id" required>
+            <option value="">Número / jogador</option>
+
+            {% for figurinha in figurinhas %}
+            <option value="{{ figurinha.id }}">
+                {{ figurinha.numero }} - {{ figurinha.nome_jogador }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-grupo">
+        <label>Figurinha que DESEJA</label>
+
+        <select name="figurinha_deseja_id" required>
+            <option value="">Número / jogador</option>
+
+            {% for figurinha in figurinhas %}
+            <option value="{{ figurinha.id }}">
+                {{ figurinha.numero }} - {{ figurinha.nome_jogador }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-grupo">
+        <label>Observação</label>
+        <input type="text" name="observacao">
+    </div>
+
+    <button type="submit">Publicar oferta</button>
+
+</form>
+
+<p>
+    <a href="{{ url_for('figurinhas.index') }}">
+        ← Voltar
+    </a>
+</p>
+
+{% endblock %}

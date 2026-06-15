@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block title %}Ofertas de Troca{% endblock %}
+
+{% block content %}
+
+<h1>Ofertas de Troca</h1>
+
+<p>
+    <a href="{{ url_for('figurinhas.cadastrar_oferta') }}">
+        Nova Oferta
+    </a>
+</p>
+
+{% if ofertas %}
+
+<ul>
+
+{% for oferta in ofertas %}
+
+    <li>
+
+        <strong>{{ oferta.colecionador.apelido }}</strong>
+        ({{ oferta.colecionador.cidade }})
+
+        <br>
+
+        <strong>Oferece:</strong>
+
+        {% for item in oferta.itens %}
+            {% if item.tipo == "oferece" %}
+                #{{ item.figurinha.numero }}
+                - {{ item.figurinha.nome_jogador }}
+            {% endif %}
+        {% endfor %}
+
+        <br>
+
+        <strong>Deseja:</strong>
+
+        {% for item in oferta.itens %}
+            {% if item.tipo == "deseja" %}
+                #{{ item.figurinha.numero }}
+                - {{ item.figurinha.nome_jogador }}
+            {% endif %}
+        {% endfor %}
+
+        {% if oferta.observacao %}
+        <br>
+        <strong>Observação:</strong>
+        {{ oferta.observacao }}
+        {% endif %}
+
+    </li>
+
+    <hr>
+
+{% endfor %}
+
+</ul>
+
+{% else %}
+
+<p>Nenhuma oferta cadastrada.</p>
+
+{% endif %}
+
+{% endblock %}
