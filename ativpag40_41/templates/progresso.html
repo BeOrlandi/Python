@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Progresso — TaskFlow{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <div>
+        <p class="text-primary fw-semibold mb-1">Dashboard de progresso</p>
+        <h1 class="display-6 fw-bold mb-1">Progresso das tarefas</h1>
+        <p class="text-body-secondary mb-0">Visualização atual por status.</p>
+    </div>
+    <a class="btn btn-outline-secondary" href="{{ url_for('dashboard') }}"><i class="bi bi-arrow-left me-1"></i>Voltar ao painel</a>
+</div>
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="h5">Quantidade de tarefas por status</h2>
+                <div class="chart-container">
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="h5 mb-3">Resumo</h2>
+                <div class="d-grid gap-3">
+                    <div class="summary-box">
+                        <span>Pendentes</span>
+                        <strong id="countPendente">0</strong>
+                    </div>
+                    <div class="summary-box">
+                        <span>Em andamento</span>
+                        <strong id="countAndamento">0</strong>
+                    </div>
+                    <div class="summary-box">
+                        <span>Concluídas</span>
+                        <strong id="countConcluida">0</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+async function carregarProgresso(){
+    const r=await fetch("{{ url_for('api_progresso') }}"),d=await r.json();
+    document.getElementById("countPendente").textContent=d.pendente;
+    document.getElementById("countAndamento").textContent=d.andamento;
+    document.getElementById("countConcluida").textContent=d.concluida;
+    new Chart(document.getElementById("progressChart"),{type:"bar",data:{labels:["Pendente","Em andamento","Concluída"],datasets:[{label:"Tarefas",data:[d.pendente,d.andamento,d.concluida],borderWidth:1}]},options:{responsive:!0,maintainAspectRatio:!1,scales:{y:{beginAtZero:!0,ticks:{precision:0}}}}});
+}
+carregarProgresso().catch(()=>{document.querySelector(".chart-container").innerHTML='<p class="text-danger">Erro ao carregar.</p>';});
+</script>
+{% endblock %}
